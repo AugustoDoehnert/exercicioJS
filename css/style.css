@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+body{
+    background-color: rgb(224, 247, 247);
+}
+
+.navbar{
+    background-color: rgb(89, 212, 212);
+    
+}
+.navbar-brand{
+    color:rgb(2, 90, 75);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+
+    background-color: rgb(196, 252, 252);
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 30%;
+    padding: 0.6rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card-descricao {
+    text-align: center;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    
+}
+
+.card-titulo {
+    text-align: center;
+}
+
+.card-botao {
+    border-radius: 10px;
+    background-color: rgb(6, 185, 240);
+    border: 2px solid rgb(0, 102, 133);
+    width: 200px;
+    padding: 5px;
+}
+
+.card-botao:hover {
+    background-color: rgb(125, 222, 252);
+}
+
+@media (max-width: 600px) {
+    * {
+        font-size: 22px;
+    }
+    .card {
+        width: 80%;
+        height: 575px;
+    }
+
+    .card-botao{
+        width: 100px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 801px) {
+    * {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 45%;
+        height: 550px;
+    }
+
+    .card-img{
+        width: 200px;
+        height: 150px;
+    }
+}
