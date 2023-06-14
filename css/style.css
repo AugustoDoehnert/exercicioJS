@@ -5,6 +5,10 @@
     font-size: 17px;
 }
 
+.body-dark{
+    background-color: black;
+}
+
 body{
     background-color: rgb(224, 247, 247);
 }
@@ -65,11 +69,33 @@ body{
     border: 2px solid rgb(0, 102, 133);
     width: 200px;
     padding: 5px;
+
+    transition: ease 0.3s;
 }
 
 .card-botao:hover {
-    background-color: rgb(125, 222, 252);
+    background-color: rgb(141, 226, 252);
+    border: 2px solid rgb(6, 166, 214);
 }
+
+footer {
+    background-color: rgb(89, 212, 212);
+    
+}
+
+.container-footer{
+    display: flex;
+}
+.container-icon{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container-footer img{
+    width: 1%;
+}
+
 
 @media (max-width: 600px) {
     * {

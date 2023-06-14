@@ -1,52 +1,52 @@
 const listaPosts = [
     {
         titulo: "Negão",
-        descricao:"Negão é um vira lata, adulto, vacinado, encontrado morando perto de um posto de gasolina na beira da estrada, ele odeio ser chamado de palmeirense.",
+        descricao: "Negão é um vira lata, adulto, vacinado, encontrado morando perto de um posto de gasolina na beira da estrada, ele odeia ser chamado de palmeirense.",
         imgURL: "./img/viralata1.jpg"
     },
     {
         titulo: "Churros",
-        descricao:"Churros é um vira lata, filho de umas das cadelas do abrigo.",
+        descricao: "Churros é um vira lata, filho de umas das cadelas do abrigo.",
         imgURL: "./img/cachorro.webp",
     },
     {
         titulo: "Cesar",
-        descricao:"Cesar é um gato que foi encontrado na rua, ele estava muito doente e feio, mas agr bonito charmoso e elegante para ser adotado.",
+        descricao: "Cesar é um gato que foi encontrado na rua, ele estava muito doente e feio, mas agr bonito charmoso e elegante para ser adotado.",
         imgURL: "./img/gato.webp",
     },
     {
         titulo: "Belzebuh",
-        descricao:"Belzebuh é um filhote de pinscher, virado no diabo, pronto ter amor e carinho.",
+        descricao: "Belzebuh é um filhote de pinscher, virado no diabo, pronto ter amor e carinho.",
         imgURL: "./img/pinscher.webp",
     },
     {
         titulo: "Bolinha",
-        descricao:"Bolinha é uma pitbull, ela é muito esperta e ama atividades fisicas.",
+        descricao: "Bolinha é uma pitbull, ela é muito esperta e ama atividades fisicas.",
         imgURL: "./img/pitbull.jpg",
     },
     {
         titulo: "Bagre",
-        descricao:"Bagre é um bagre, unidade unica, feito pra um aquario.",
+        descricao: "Bagre é um bagre, unidade unica, feito pra um aquario.",
         imgURL: "./img/bagre.png",
     },
     {
         titulo: "Boto",
-        descricao:"O boto foi encontrado na beira do rio muito doente e desnutrido, e nos fomos atras dele para cuidar dele, e agora ele esta pronto para ter uma familia para que vai amar e cuidar dele.",
+        descricao: "O boto foi encontrado na beira do rio muito doente e desnutrido, e nos fomos atras dele para cuidar dele, e agora ele esta pronto para ter uma familia para que vai amar e cuidar dele.",
         imgURL: "./img/boto.jpg",
     },
     {
         titulo: "Tucunaré",
-        descricao:"Tucunaré é um Tucunaré, unidade unica, feito pra um aquario.",
+        descricao: "Tucunaré é um Tucunaré, unidade unica, feito pra um aquario.",
         imgURL: "./img/tucuanre.jpg",
     },
     {
         titulo: "Helio",
-        descricao:"Helio é um papagaio, de voz fina, que ODEIO o flamengo, e em dias de estresse só se acalma com o hino do vasco.",
+        descricao: "Helio é um papagaio, de voz fina, que ODEIA o flamengo, e em dias de estresse só se acalma com o hino do vasco.",
         imgURL: "./img/papagaio.jpg",
     },
     {
         titulo: "Perry",
-        descricao:"Perry o ornitorrinco, é um animal muito docil e carinhoso, gosta de usar seu chapéu, e ama água.",
+        descricao: "Perry o ornitorrinco, é um animal muito docil e carinhoso, gosta de usar seu chapéu, e ama água.",
         imgURL: "./img/ornitorrinco.jpg",
     },
 ];
@@ -60,7 +60,7 @@ const criacaoPosts = () => {
                 <img class="card-img" src=${post.imgURL} />
                 <h2 class="card-titulo"> ${post.titulo}</h2>
                 <p class="card-descricao"> ${post.descricao}</p>
-                <button type="button" class="card-botao">Entrar em contato!</button>
+                <button class="card-botao">Entrar em contato!</button>
             </div>
         `;
         container.innerHTML += card;
@@ -69,4 +69,33 @@ const criacaoPosts = () => {
 
 window.onload = () => {
     criacaoPosts();
-}
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+        card.addEventListener("mouseover", () => {
+            card.style.backgroundColor = "yellow";
+        });
+        card.addEventListener("mouseout", () => {
+            card.style.backgroundColor = "transparent";
+        })
+    });
+};
+let botaoTema = document.querySelector("#botaotema");
+console.log(botaoTema)
+
+botaoTema.addEventListener("click", () => {
+    let body = document.querySelector("body");
+
+    if (botaoTema.checked) {
+        alert("ok!")
+        body.classList.add("body-dark");
+    } else {
+        body.classList.remove("body-dark");
+    }
+});
+
+inputTest = document.getElementById("inputtext")
+
+inputTest.addEventListener("keydown", (tecla) => {
+    alert("tecla pressionada: " + tecla.key);
+})
