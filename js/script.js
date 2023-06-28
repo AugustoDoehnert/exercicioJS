@@ -70,8 +70,7 @@ const criacaoPosts = () => {
                 <img class="card-img" src=${post.imgURL} />
                 <h2 class="card-titulo"> ${post.titulo}</h2>
                 <p class="card-descricao"> ${post.descricao}</p>
-                <a class="card-botao" idAnimal="${post.id}">
-                ADOTAR</a>
+                <a class="card-botao" idAnimal="${post.id}">ADOTAR</a>
             </div>
         `;
         container.innerHTML += card;
@@ -90,9 +89,14 @@ window.onload = () => {
             card.style.backgroundColor = "transparent";
         })
 
-        card.lastChild.addEventListener("click", (event) => {
-            
-            sessionStorage.setItem*("idAnimal", card.lastElementChild.getAttribute("idAnimal"));
+        card.lastElementChild.addEventListener("click", (event) => {
+            console.log("ebtrdmfkdm");
+            event.preventDefault();
+
+            sessionStorage.setItem(
+                "idAnimal",
+                 card.lastElementChild.getAttribute("idAnimal")
+            );
             window.location.href = "../adotar.html"
         });
     });
